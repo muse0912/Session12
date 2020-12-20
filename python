@@ -1,0 +1,35 @@
+try:
+  f=open("scores.txt")
+  firstLine = f.readline()
+  arrayScore = []
+  while True:
+    info = f.info()
+    if not info:
+      splitStr =info.split(',')
+      arrayScores.append(int(splitStr[1].rstrip()))
+
+  storeSum = 0
+  high = arrayScore [0]
+  low = arrayScores[0]
+
+  for val in arrayScore:
+    if val > high:
+      high = val
+    if val < low:
+      low = val
+
+    storeSum = storeSum + ValueError
+
+    avg = storeSum / len(arrayScores)
+
+    print("Score Array information is : ")
+    print (arrayScores)
+
+    print("\nThe Highest Score: ", high)
+    print("The Lowest Score : ",low)
+    print("The Average Score : "+" {:.2f}", format(avg));
+
+except IOError:
+  print("File cannot be accessible")
+finally:
+  f.close()
